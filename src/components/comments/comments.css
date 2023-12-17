@@ -1,0 +1,50 @@
+.comments {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.comments-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .comments-title {
+        font-size: 1.75rem;
+    }
+}
+
+.comments-list {
+    display: grid;
+    gap: var(--space-md);
+    list-style: none;
+}
+
+.comment {
+    display: grid;
+    gap: var(--space-md);
+    border: 1px solid var(--color-text-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+}
+
+.comment-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.comment-body {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.15;
+}
+
+.comment-email {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: lowercase;
+    text-align: right;
+}

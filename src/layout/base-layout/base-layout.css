@@ -1,0 +1,12 @@
+.bg-dark {
+    min-height: 100vmax;
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+    position: relative;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-md);
+}

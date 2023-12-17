@@ -1,0 +1,22 @@
+.post-list__title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: var(--space-xl);
+}
+
+.post-list__items {
+    display: grid;
+    grid-gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .post-list__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .post-list__items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

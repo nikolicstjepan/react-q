@@ -1,0 +1,17 @@
+.post-search__container {
+    margin-bottom: var(--space-lg);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.post-search__input {
+    max-width: 300px;
+    width: 100%;
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-text-light);
+    background-color: transparent;
+    color: var(--color-text-light);
+}

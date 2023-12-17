@@ -1,0 +1,22 @@
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.post-author__avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-text-light);
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-xs);
+}
+
+.post-author__username {
+    font-size: 1rem;
+    font-weight: normal;
+}
