@@ -7,7 +7,7 @@ import Layout from "@/layout/base-layout/base-layout";
 
 describe("BaseLayout", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <Layout>
                     <span>Hello, World!</span>
@@ -15,6 +15,7 @@ describe("BaseLayout", () => {
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("renders the correct child", () => {

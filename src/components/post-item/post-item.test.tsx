@@ -17,12 +17,13 @@ const post: Post = {
 
 describe("PostListItem", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <PostListItem post={post} />
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     // Test to check if the component renders the post title correctly

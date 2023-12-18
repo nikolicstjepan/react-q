@@ -12,12 +12,13 @@ jest.mock("@/components/post-search/use-post-search", () => {
 
 describe("PostSearch", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <PostSearch />
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("renders the search input", () => {

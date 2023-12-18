@@ -7,12 +7,13 @@ import Loader from "@/components/loader";
 
 describe("Loader", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <Loader />
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("renders the loader", () => {

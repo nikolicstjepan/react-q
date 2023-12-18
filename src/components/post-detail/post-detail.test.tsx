@@ -32,12 +32,13 @@ const post: Post = {
 
 describe("PostDetail", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <PostDetail Sidebar={() => <div>Sidebar</div>} post={post} />
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("renders the post title", () => {

@@ -7,7 +7,7 @@ import ErrorLayout from "@/layout/error-layout/error-layout";
 
 describe("ErrorLayout", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <ErrorLayout>
                     <span>Hello, World!</span>
@@ -15,6 +15,7 @@ describe("ErrorLayout", () => {
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("renders the correct child", () => {

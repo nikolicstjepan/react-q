@@ -7,12 +7,13 @@ import PostAuthor from "@/components/post-author";
 
 describe("PostAuthor", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <PostAuthor author="Author Man" />
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("renders the author's name", () => {

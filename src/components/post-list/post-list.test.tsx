@@ -9,7 +9,7 @@ import { Post } from "@/lib/types";
 
 describe("PostList", () => {
     test("renders without crashing", () => {
-        const { container } = render(
+        const { container, asFragment } = render(
             <Router>
                 <PostList posts={[]}>
                     {(post) => (
@@ -21,6 +21,7 @@ describe("PostList", () => {
             </Router>
         );
         expect(container).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
     });
 
     test("renders correct number of PostItem components", () => {
